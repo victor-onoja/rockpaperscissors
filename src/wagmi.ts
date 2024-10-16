@@ -1,4 +1,4 @@
-import { getDefaultConfig } from '@rainbow-me/rainbowkit';
+import { getDefaultConfig } from "@rainbow-me/rainbowkit";
 import {
   arbitrum,
   base,
@@ -6,18 +6,20 @@ import {
   optimism,
   polygon,
   sepolia,
-} from 'wagmi/chains';
+  arbitrumSepolia,
+} from "wagmi/chains";
 
 export const config = getDefaultConfig({
-  appName: 'RainbowKit App',
-  projectId: 'YOUR_PROJECT_ID',
+  appName: "RockPaperScissors",
+  projectId: "6ff8eb59587cd5a38c24cc85d30763ea",
   chains: [
     mainnet,
     polygon,
     optimism,
     arbitrum,
+    arbitrumSepolia,
     base,
-    ...(process.env.NEXT_PUBLIC_ENABLE_TESTNETS === 'true' ? [sepolia] : []),
+    ...(process.env.NEXT_PUBLIC_ENABLE_TESTNETS === "true" ? [sepolia] : []),
   ],
   ssr: true,
 });
